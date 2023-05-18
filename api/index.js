@@ -37,4 +37,12 @@ app.post('/', (req, res) => {
   })
 })
 
+app.post('/test', (req, res) => {
+
+  res.json({
+    message: 'Hello World!'
+  })
+
+})
+
 app.listen(port, () => console.log(`Zoom Meeting SDK Auth Endpoint Sample Node.js listening on port ${port}!`))
