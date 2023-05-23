@@ -29,35 +29,12 @@ function handler(req, res) {
 
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log("////////////////////")
-  // console.log(req.body)
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log("||||||||||||||||||||")
-  // console.log(process.env.ZOOM_MEETING_SDK_KEY)
-  // console.log(process.env.ZOOM_MEETING_SDK_SECRET)
-
-  // res.json({
-  //   message: 'Hello World!'
-  //   , SDK : process.env.ZOOM_MEETING_SDK_KEY
-  //   , body : req.body
-  // })
-
-
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
-    mn: req.body.meetingNumber,
+    // mn: req.body.meetingNumber,
+    mn: 91414511328,
     role: req.body.role,
+    // role: 0,
     iat: iat,
     exp: exp,
     appKey: process.env.ZOOM_MEETING_SDK_KEY,
