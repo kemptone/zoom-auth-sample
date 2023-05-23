@@ -31,6 +31,8 @@ function handler(req, res) {
 
   const mn = 91414511328
 
+  const zak = `eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IkhjdFZvbmgtU0syYjZfMHBDMTFVMFEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjk5LCJ3Y2QiOiJhdzEiLCJjbHQiOjAsIm1udW0iOiI5MTQxNDUxMTMyOCIsImV4cCI6MTY5MjYzODAwMSwiaWF0IjoxNjg0ODYyMDAxLCJhaWQiOiJDbm1BeXhPM1FZdU84YnZEQy1aWV93IiwiY2lkIjoiIn0.JG7JZj8HRfas4_oGd5WcuBJyV6tcqpReeZnd7YheLr4`
+
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
     // mn: req.body.meetingNumber,
@@ -51,6 +53,7 @@ function handler(req, res) {
     signature: signature
     , meetingNumber : mn
     , sdkKey : process.env.ZOOM_MEETING_SDK_KEY
+    , zak : Number(req.body.role) === 1 ? zak : ''
   })
 }
 
