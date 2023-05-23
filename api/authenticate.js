@@ -29,10 +29,12 @@ function handler(req, res) {
 
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
+  const mn = 91414511328
+
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
     // mn: req.body.meetingNumber,
-    mn: 91414511328,
+    mn,
     role: req.body.role,
     // role: 0,
     iat: iat,
@@ -47,6 +49,8 @@ function handler(req, res) {
 
   res.json({
     signature: signature
+    , meetingNumber : mn
+    , sdkKey : process.env.ZOOM_MEETING_SDK_KEY
   })
 }
 
