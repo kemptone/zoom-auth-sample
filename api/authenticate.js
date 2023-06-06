@@ -29,9 +29,9 @@ function handler(req, res) {
 
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
-  const mn = 91414511328
+  const mn = 97666006188
 
-  const zak = `eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IkhjdFZvbmgtU0syYjZfMHBDMTFVMFEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjk5LCJ3Y2QiOiJhdzEiLCJjbHQiOjAsIm1udW0iOiI5MTQxNDUxMTMyOCIsImV4cCI6MTY5MjYzODAwMSwiaWF0IjoxNjg0ODYyMDAxLCJhaWQiOiJDbm1BeXhPM1FZdU84YnZEQy1aWV93IiwiY2lkIjoiIn0.JG7JZj8HRfas4_oGd5WcuBJyV6tcqpReeZnd7YheLr4`
+  const zak = `eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IkhjdFZvbmgtU0syYjZfMHBDMTFVMFEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjk5LCJ3Y2QiOiJhdzEiLCJjbHQiOjAsIm1udW0iOiI5NzY2NjAwNjE4OCIsImV4cCI6MTY5Mzc4MDA0NiwiaWF0IjoxNjg2MDA0MDQ2LCJhaWQiOiJDbm1BeXhPM1FZdU84YnZEQy1aWV93IiwiY2lkIjoiIn0.haTIUzCoEWxuNtuvGWRNgOS9OKMxzqftymlBo8-k1YE`
 
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
