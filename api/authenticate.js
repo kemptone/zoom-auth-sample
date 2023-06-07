@@ -33,6 +33,8 @@ function handler(req, res) {
 
   const zak = `eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6IkhjdFZvbmgtU0syYjZfMHBDMTFVMFEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjk5LCJ3Y2QiOiJhdzEiLCJjbHQiOjAsIm1udW0iOiI5NzY2NjAwNjE4OCIsImV4cCI6MTY5Mzc4MDA0NiwiaWF0IjoxNjg2MDA0MDQ2LCJhaWQiOiJDbm1BeXhPM1FZdU84YnZEQy1aWV93IiwiY2lkIjoiIn0.haTIUzCoEWxuNtuvGWRNgOS9OKMxzqftymlBo8-k1YE`
 
+  const tk = `1I2599OiP67w9ZwJvNASln91hXgTPjIV3MldcHClXpA.DQMAAAAWvVj8rBZ0OVZKNFA0MFMwNm9jVkpfNUdHWGhRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
     // mn: req.body.meetingNumber,
@@ -54,6 +56,7 @@ function handler(req, res) {
     , meetingNumber : mn
     , sdkKey : process.env.ZOOM_MEETING_SDK_KEY
     , zak : Number(req.body.role) === 1 ? zak : ''
+    , tk : Number(req.body.role) === 1 ? '' : tk
   })
 }
 
