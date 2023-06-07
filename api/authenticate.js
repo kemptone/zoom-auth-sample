@@ -37,7 +37,7 @@ function handler(req, res) {
   const oPayload = {
     sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
     // mn: req.body.meetingNumber,
-    mn,
+    mn : mn,
     role: req.body.role,
     // role: 0,
     iat: iat,
@@ -54,8 +54,8 @@ function handler(req, res) {
     signature: signature
     , meetingNumber : mn
     , sdkKey : process.env.ZOOM_MEETING_SDK_KEY
-    , zak
-    , tk
+    , zak : zak
+    , tk : tk
   })
 }
 
